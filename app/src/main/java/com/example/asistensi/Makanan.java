@@ -1,24 +1,30 @@
 package com.example.asistensi;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-
-public class Makanan extends Fragment {
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             @Nullable ViewGroup container, @Nullable Bundle
-                                     savedInstanceState) {
-        return
-                inflater.inflate(R.layout.activity_makanan,container,false);
+public class Makanan {
+    private String _id, _nama, _harga;
+    public Makanan (String id, String nama, String harga) {
+        this._id = id;
+        this._nama = nama;
+        this._harga = harga;
+    }
+    public Makanan() {
+    }
+    public String get_id() {
+        return _id;
+    }
+    public void set_id(String _id) {
+        this._id = _id;
+    }
+    public String get_nama() {
+        return _nama;
+    }
+    public void set_nama(String _nama) {
+        this._nama = _nama;
+    }
+    public String get_harga() {
+        return _harga;
+    }
+    public void set_harga(String _harga) {
+        this._harga = _harga;
     }
 }

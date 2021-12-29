@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    //tambah warna
+    <color name="list_row_start_color">#FFBB86FC</color>
+    <color name="list_row_end_color">#FF6200EE</color>
+    <color name="list_row_hover_start_color">#FF6200EE</color>
+    <color name="list_row_hover_end_color">#FFBB86FC</color>
+
 </resources>

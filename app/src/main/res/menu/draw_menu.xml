@@ -4,12 +4,12 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
-        <item android:id="@+id/nav_input"
-            android:icon="@drawable/ic_input"
-            android:title="Input Data Makanan"/>
-        <item android:id="@+id/nav_chat"
+        <item android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home"/>
+        <item android:id="@+id/nav_makanan"
             android:icon="@drawable/ic_list"
-            android:title="Daftar Makanan"/>
+            android:title="Makanan"/>
     </group>
 
 </menu>

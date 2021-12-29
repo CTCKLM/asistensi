@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Asistensi">
-        <activity
-            android:name=".Makanan"
-            android:exported="true" />
+        <activity android:name=".MainCreateMakanan" android:exported="true" />
+        <activity android:name=".MainReadMakanan" android:exported="true"/>
+        <activity android:name=".MainUpdelMakanan" android:exported="true"/>
         <activity
             android:name=".MainActivity"
             android:theme="@style/NoActionBar"

@@ -7,13 +7,14 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements
-        NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,18 +37,19 @@ public class MainActivity extends AppCompatActivity implements
         toggle.syncState();
 //membuat default navigation menu select
         if(savedInstanceState == null){
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new Makanan()).commit();
-            navigationView.setCheckedItem(R.id.nav_input);}
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new homeFragment()).commit();
+            navigationView.setCheckedItem(R.id.nav_home);}
     }
     //drawer menu fragment handler
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem
-                                                    item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.nav_input:
+            case R.id.nav_home:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new homeFragment()).commit();
+                    break;
+            case R.id.nav_makanan:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new Makanan()).commit();
+                        new makananFragment()).commit();
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);
@@ -63,4 +65,14 @@ public class MainActivity extends AppCompatActivity implements
             super.onBackPressed();
         }
     }
+    public void create(View view){
+        Intent a = new
+                Intent(MainActivity.this,MainCreateMakanan.class);
+        startActivity(a);
+    }
+    public void read(View view){
+        Intent b = new Intent(MainActivity.this,MainReadMakanan.class);
+        startActivity(b);
+    }
+
 }
