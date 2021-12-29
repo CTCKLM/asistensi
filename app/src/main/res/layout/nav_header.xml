@@ -12,7 +12,8 @@
         android:id="@+id/iconid"
         android:layout_width="85dp"
         android:layout_height="80dp"
-        android:src="@drawable/ic_food" />
+        android:src="@drawable/ic_food"
+        app:tint="#215F8F" />
 
     <Space
         android:layout_width="match_parent"
@@ -21,12 +22,18 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="casual"
         android:text="Navigasi Makanan"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1918101, 1918102, 1918104" />
+        android:fontFamily="casual"
+        android:text="1918101, 1918102, 1918104"
+        android:textColor="@color/black" />
 
 </LinearLayout>
