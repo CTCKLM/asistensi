@@ -13,7 +13,7 @@
         android:layout_width="85dp"
         android:layout_height="80dp"
         android:src="@drawable/ic_food"
-        app:tint="#215F8F" />
+        android:tint="#070987" />
 
     <Space
         android:layout_width="match_parent"
